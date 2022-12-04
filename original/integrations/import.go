@@ -2,7 +2,7 @@ package integrations
 
 import (
 	"fmt"
-	"github.com/bradleyshawkins/go-clean-architecture/existing/handlers"
+	"github.com/bradleyshawkins/go-clean-architecture/original/handlers"
 	"io"
 )
 

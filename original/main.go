@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bradleyshawkins/go-clean-architecture/existing/handlers"
-	"github.com/bradleyshawkins/go-clean-architecture/existing/integrations"
+	"github.com/bradleyshawkins/go-clean-architecture/original/handlers"
+	"github.com/bradleyshawkins/go-clean-architecture/original/integrations"
 )
 
 func main() {
