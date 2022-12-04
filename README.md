@@ -11,4 +11,4 @@ Refactored contains code that I have refactored as based on the Clean Architectu
 
 The below diagram gives a representation of Clean Architecture
 
-![Clean Architecture](./cleanArchitectureDiagram.png?raw=true Clean Architecture)
+![Clean Architecture](./cleanArchitectureDiagram.png)
