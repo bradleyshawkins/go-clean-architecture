@@ -19,7 +19,7 @@ func NewFileDownloadHandler(importer *document.Importer) *FileDownloadHandler {
 type downloadFileRequest struct {
 	DownloadURL string `json:"downloadURL"`
 	DocumentID  string `json:"documentID"`
-	CategoryID  string `json:"categoryID"`
+	FileName    string `json:"fileName"`
 	PatientID   string `json:"patientID"`
 }
 
@@ -34,8 +34,8 @@ func (f *FileDownloadHandler) DownloadFile(w http.ResponseWriter, r *http.Reques
 
 	doc := &document.Document{
 		DownloadURL: req.DownloadURL,
+		FileName:    req.FileName,
 		DocumentID:  req.DocumentID,
-		CategoryID:  req.CategoryID,
 		PatientID:   req.PatientID,
 	}
 

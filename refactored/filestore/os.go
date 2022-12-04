@@ -53,7 +53,7 @@ func (o *OS) NewTempFile(doc *document.Document) (io.ReadWriteCloser, error) {
 		return nil, err
 	}
 
-	pattern := determinePattern(doc)
+	pattern := fmt.Sprintf("%s-*.%s", doc.PatientID, doc.FileExtension())
 
 	fmt.Println("Creating temp file at", o.directory)
 	tmpFile, err := os.CreateTemp(o.directory, pattern)
@@ -71,9 +71,4 @@ func (o *OS) ensureDirectoryExists() error {
 		return err
 	}
 	return nil
-}
-
-// determinePattern could be improved to figure out file extensions instead of saving everything as jpg
-func determinePattern(doc *document.Document) string {
-	return fmt.Sprintf("%s-*.jpg", doc.PatientID)
 }
